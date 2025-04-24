@@ -146,4 +146,53 @@ public class Ainteger {
         String ans = this.sub(a).toString();
         return remove_zeroes(ans);
     }
+    public String mult(Ainteger a){
+        int check = 0;
+        StringBuilder thisnum = new StringBuilder((num));
+        StringBuilder othernum = new StringBuilder((a.get()));
+        if((num.charAt(0)=='-'&&a.get().charAt(0)!='-')||(num.charAt(0)!='-'&&a.get().charAt(0)=='-')){
+            check =1;
+            if(num.charAt(0)=='-') thisnum.deleteCharAt(0);
+            else othernum.deleteCharAt(0);
+        }
+        else if(num.charAt(0)=='-'&&a.get().charAt(0)=='-'){
+            thisnum.deleteCharAt(0);
+            othernum.deleteCharAt(0);
+        }
+        int n=thisnum.length();
+        String result = "0";
+        Ainteger output = new Ainteger(result);
+        String num1 = thisnum.toString();
+        String num2 = othernum.toString();
+        int size2 = num2.length();
+        if(n<size2){
+            num1 = num2;
+            num2 = thisnum.toString();
+            size2 = num2.length();
+        }
+        int size1 = num1.length();
+        Ainteger temp = new Ainteger();
+        for(int i  = size2 -1;i>=0;i--){
+            int carry =0;
+            int curr = 0;
+            String trailing_zeroes="0".repeat(size2-i-1);
+            StringBuilder current_product = new StringBuilder(trailing_zeroes);
+            for(int j = size1-1;j>=0;j--){
+                curr = (num1.charAt(j) - 48)*(num2.charAt(i)-48)+carry;
+                carry  = curr/10;
+                curr = curr%10;
+                current_product.insert(0, (char)(curr + '0'));
+                if(j==0&&carry>0) current_product.insert(0, (char)(carry + '0'));
+            }
+            temp.update(current_product.toString());
+            result = output.add(temp).toString();
+            output.update(result);
+        }
+        if(check==1) return "-"+output.get();
+        else return output.get();
+    }
+    public String multiply(Ainteger a){
+        String ans = this.mult(a).toString();
+        return remove_zeroes(ans);
+    }
 }
