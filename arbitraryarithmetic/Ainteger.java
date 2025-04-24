@@ -195,4 +195,67 @@ public class Ainteger {
         String ans = this.mult(a).toString();
         return remove_zeroes(ans);
     }
+    public List<String> division(Ainteger a) {
+        int check = 0;
+        StringBuilder num1 = new StringBuilder(remove_zeroes(num));
+        StringBuilder num2 = new StringBuilder(remove_zeroes(a.get()));
+        String num_2 = num2.toString();
+        if (num_2.equals("0")) throw new ArithmeticException("Division by zero");
+        if ((num1.charAt(0) == '-' && num2.charAt(0) != '-') || 
+            (num1.charAt(0) != '-' && num2.charAt(0) == '-')) {
+            check = 1;
+            if (num1.charAt(0) == '-') num1.deleteCharAt(0);
+            else num2.deleteCharAt(0);
+        } else if (num1.charAt(0) == '-' && num2.charAt(0) == '-') {
+            num1.deleteCharAt(0);
+            num2.deleteCharAt(0);
+        }
+        String num1_str = num1.toString();
+        String num2_str = num2.toString();
+        StringBuilder quotient = new StringBuilder();
+        String currentDividendPart = "";
+        Ainteger temp1 = new Ainteger();
+        Ainteger temp2 = new Ainteger();
+        for (int i = 0; i < num1_str.length(); i++) {
+            currentDividendPart += num1_str.charAt(i);
+            currentDividendPart = remove_zeroes(currentDividendPart);
+            temp1.update(currentDividendPart);
+            temp2.update(num2_str);
+            if (temp1.compareTo(temp2) < 0) {
+                quotient.append('0');
+                continue;
+            }
+            int digit = 0;
+            for (int guess = 9; guess >= 1; guess--) {
+                temp1.update(num2_str);
+                temp2.update(Integer.toString(guess));
+                String product = temp1.mult(temp2);
+                temp1.update(currentDividendPart);
+                temp2.update(product);
+                if (temp1.compareTo(temp2) >= 0){
+                    digit = guess;
+                    break;
+                }
+            }
+            quotient.append(digit);
+            temp1.update(num2_str);
+            temp2.update(Integer.toString(digit));
+            String product = temp1.mult(temp2);
+            temp1.update(currentDividendPart);
+            temp2.update(product);
+            currentDividendPart = temp1.sub(temp2).toString();
+        }
+        String rem = remove_zeroes(currentDividendPart);
+        String finalQuotient = remove_zeroes(quotient.toString());
+        if (finalQuotient.isEmpty()) finalQuotient = "0";
+        if (rem.isEmpty()) rem = "0";
+        if (check == 1 && !finalQuotient.equals("0")) {
+            finalQuotient = "-" + finalQuotient;
+        }
+        return List.of(finalQuotient, rem);
+    }    
+    public String divide(Ainteger a){
+        String ans = this.division(a).get(0);
+        return remove_zeroes(ans);
+    }
 }
