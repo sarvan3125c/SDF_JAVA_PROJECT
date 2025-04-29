@@ -20,6 +20,28 @@ public class Afloat{
         }
         no_decimal_num  = intpart + decimalpart;
     }
+    public static boolean valid_check(String s){
+        int n = s.length();
+        int index = s.indexOf('.');
+        int check=0;
+        if(index==0||index==n-1) return false;
+        if(s.charAt(0)=='-') check = 1;
+        for(int i = check;i<n;i++){
+            if(i==index){
+                continue;
+            }
+            if(0<=s.charAt(i)-48 && s.charAt(i)-48<10){}
+            else{
+                check =2;
+                break;
+            }
+        }
+        if(check==2) return false;
+        else return true;
+    }
+    public static Afloat parse(String s){
+        return new Afloat(s);
+    }
     public List<String> get(){
         return List.of(num,intpart,decimalpart,no_decimal_num);
     }
@@ -30,6 +52,7 @@ public class Afloat{
     public String remove_zeroes(String s){
         String[] parts = s.split("\\.");
         String ans = parts[0];
+        String decimalStr = (parts.length > 1) ? parts[1] : "0";
         if(ans.charAt(0)!='-')
             ans = ans.replaceFirst("^0+(?!$)", "");
         else{
@@ -39,7 +62,7 @@ public class Afloat{
             okay = okay.replaceFirst("^0+(?!$)", "");
             ans = '-'+okay;
         }
-        StringBuilder decimal = new StringBuilder(parts[1]);
+        StringBuilder decimal = new StringBuilder(decimalStr);
         int k = decimal.length() - 1;
         while (k >= 0) {
             if (decimal.charAt(k) == '0') {
@@ -52,7 +75,22 @@ public class Afloat{
         if (decimal.length() == 0) decimal = new StringBuilder("0");
         return ans+'.'+decimal.toString();
     }
-    public String add(Afloat a){
+    
+    private int compareTo(Afloat a) {
+        StringBuilder thisIntSB = new StringBuilder(remove_zeroes(this.get().get(1)));
+        StringBuilder otherIntSB = new StringBuilder(remove_zeroes(a.get().get(1)));
+        StringBuilder thisDecSB = new StringBuilder(this.get().get(2).replaceAll("0+$", ""));
+        StringBuilder otherDecSB = new StringBuilder(a.get().get(2).replaceAll("0+$", ""));
+        while (thisIntSB.length() < otherIntSB.length()) thisIntSB.insert(0, '0');
+        while (otherIntSB.length() < thisIntSB.length()) otherIntSB.insert(0, '0');
+        while (thisDecSB.length() < otherDecSB.length()) thisDecSB.append('0');
+        while (otherDecSB.length() < thisDecSB.length()) otherDecSB.append('0');
+        int cmp = thisIntSB.toString().compareTo(otherIntSB.toString());
+        if (cmp != 0) return cmp;
+        return thisDecSB.toString().compareTo(otherDecSB.toString());
+    }
+    
+    public String add(Afloat a){    
         List<String> input = a.get();
         int size2 = input.get(2).length();
         StringBuilder othernum = new StringBuilder(input.get(0));
@@ -195,11 +233,21 @@ public class Afloat{
                 break;
             }
         }
+        String resultStr = result.toString();
+        int dotIndex = resultStr.indexOf('.');
+        if (dotIndex != -1 && (resultStr.length() - dotIndex - 1) > 30) {
+            resultStr = resultStr.substring(0, dotIndex + 31); // 30 decimals after dot
+        }
+        result = new StringBuilder(resultStr);
         if(check==1) return "-"+result.toString();
         return result.toString();
     }
     public String divide(Afloat a){
         String ans = this.division(a);
+        String temp = a.multiply(new Afloat(ans));
+        if(this.compareTo(new Afloat(temp))!=0){
+            return ans;
+        }
         return remove_zeroes(ans);
     }
 }

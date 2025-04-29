@@ -8,6 +8,20 @@ public class Ainteger {
     public Ainteger(String s){
         num = s;
     }
+    public static boolean valid_check(String s){
+        int n = s.length();
+        int check=0;
+        if(s.charAt(0)=='-') check = 1;
+        for(int i = check;i<n;i++){
+            if(0<=s.charAt(i)-48 && s.charAt(i)-48<10){}
+            else{
+                check =2;
+                break;
+            }
+        }
+        if(check==2) return false;
+        else return true;
+    }
     public String get(){
         return num;
     }
@@ -17,6 +31,9 @@ public class Ainteger {
     public Ainteger copy(){
         Ainteger newo = new Ainteger(num);
         return newo;
+    }
+    public static Ainteger parse(String s){
+        return new Ainteger(s);
     }
     private int compareTo(Ainteger a){
         StringBuilder thisnum = new StringBuilder(remove_zeroes(this.num));
