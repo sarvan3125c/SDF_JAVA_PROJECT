@@ -1,3 +1,5 @@
+package arbitraryarithmetic;
+import java.util.List;
 public class Ainteger {
     private String num;
     public Ainteger(){
@@ -19,15 +21,9 @@ public class Ainteger {
     private int compareTo(Ainteger a){
         StringBuilder thisnum = new StringBuilder(remove_zeroes(this.num));
         StringBuilder othernum = new StringBuilder(remove_zeroes(a.get()));
-        int length1 = thisnum.length();
-        int length2 = othernum.length();
-        if(length1>length2){
-            return 1;
-        }
-        if(length1==length2) return thisnum.compareTo(othernum);
-        else{
-            return -1;
-        }
+        while(thisnum.length()>othernum.length()) othernum.insert(0, "0");
+        while(thisnum.length()<othernum.length()) thisnum.insert(0,"0");
+        return thisnum.compareTo(othernum);
     }
     private String remove_zeroes(String s){
         String ans = s;
@@ -54,31 +50,29 @@ public class Ainteger {
             return result;
         }
         else if(num.charAt(0)=='-'){
-            thisnum = new StringBuilder(num);
             thisnum.deleteCharAt(0);
             StringBuilder result  = new StringBuilder(a.sub(new Ainteger(thisnum.toString())));
             return result;
         }
         else if(a.get().charAt(0)=='-'){
-            othernum = new StringBuilder(a.get());
             othernum.deleteCharAt(0);
             StringBuilder result = new StringBuilder(this.sub(new Ainteger(othernum.toString())));
             return result;
         }
         String num1=thisnum.toString();
         String num2=othernum.toString();
-        while(num1.length()<num2.length()){
-            num1="0"+num1;
-        }
-        while(num2.length()<num1.length()){
-            num2="0"+num2;
+        int len1 = num1.length(), len2 = num2.length();
+        if (len1 < len2) {
+            num1 = "0".repeat(len2 - len1) + num1;
+        } else if (len2 < len1) {
+            num2 = "0".repeat(len1 - len2) + num2;
         }
         int size = num2.length();
         int current_sum=0;
         int carry=0;
         StringBuilder result = new StringBuilder(num1);
         for(int i =size-1;i>=0;i--){
-            current_sum =result.charAt(i)+num2.charAt(i)-2*'0'+carry;
+            current_sum =(result.charAt(i)-'0')+(num2.charAt(i)-'0')+carry;
             carry = current_sum/10;
             char e  = (char)(current_sum%10+48);
             result.setCharAt(i,e);
@@ -259,3 +253,5 @@ public class Ainteger {
         return remove_zeroes(ans);
     }
 }
+
+
