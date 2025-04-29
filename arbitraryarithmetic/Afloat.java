@@ -5,6 +5,12 @@ public class Afloat{
     private String intpart;
     private String decimalpart;
     private String no_decimal_num;
+    public Afloat(){
+        num="0.0";
+        intpart="0";
+        decimalpart="0";
+        no_decimal_num="00";
+    }
     public Afloat(String inp){
         num = inp;
         char find = '.';
