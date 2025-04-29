@@ -45,7 +45,7 @@ public class Afloat{
         if(check==2) return false;
         else return true;
     }
-    public static Afloat parse(String s){
+    public static Afloat parse(String s){ 
         return new Afloat(s);
     }
     public List<String> get(){

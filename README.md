@@ -84,25 +84,37 @@
 - `remove_zeroes(String s)`: Removes leading or trailing zeros from a string representation of a number.
 - `parse(String s)`: Parses a string into an `Afloat` object.
 - `valid_check(String s)`: Checks if a string is a valid float.
+
+## MyInfArith.java
+- It is a Java file which imports the package and runs test cases.  
+- It takes command line arguments and performs arithmetic operations.
+## Executing using MyInfArith
+To perform addition, subtraction, multiplication, and division, run the following commands:
+
+```bash
+java MyInfArith int add 49485475 9897557
+Result: 59383032
+java MyInfArith int sub -10 3
+Result: -13
+java MyInfArith int mul 6 7
+Result: 42
+java MyInfArith int div 20 4
+Result: 5
+```
+## runner.py
+- It is a python script which run the program with command lines arguments using MyInfarith.java
+---
+## Executing using runner.py
+To perform addition, subtraction, multiplication, and division, run the following commands:
+
+```bash
+python3 runner.py int add 2402726 -200000
+Result: 2202726
+ python3 runner.py int sub 58757 -8877
+Result: 67634
+
 ## Installation
 
 Simply download or clone this repository and add the `Ainteger` and `Afloat` classes to your Java project. There's no additional installation required.
 
-## Usage Example
 
-```java
-public class Main {
-    public static void main(String[] args) {
-        Ainteger num1 = new Ainteger("123456789012345678901234567890");
-        Ainteger num2 = new Ainteger("987654321098765432109876543210");
-        
-        Ainteger sum = new Ainteger(num1.add(num2).toString());
-        System.out.println("Sum: " + sum.get());
-        
-        Afloat num3 = new Afloat("12345.67890");
-        Afloat num4 = new Afloat("98765.43210");
-        
-        Afloat result = num3.add(num4);
-        System.out.println("Sum (Afloat): " + result.get());
-    }
-}
