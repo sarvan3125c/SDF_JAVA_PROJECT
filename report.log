@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.17.0 (TeX Live 2023/Debian)  (format=lualatex 2025.4.30)  30 APR 2025 11:08
+This is LuaHBTeX, Version 1.17.0 (TeX Live 2023/Debian)  (format=lualatex 2025.4.30)  30 APR 2025 11:25
  restricted system commands enabled.
 **report.tex
 (./report.tex
@@ -355,7 +355,7 @@ warning  (pdf backend): ignoring duplicate destination with the name 'page.1'
 [1
 Missing character: There is no ’ (U+2019) in font rm-lmr12!
 ] [2] [3] [4] [5] [6] [7]
-Overfull \hbox (22.74478pt too wide) in paragraph at lines 243--244
+Overfull \hbox (22.74478pt too wide) in paragraph at lines 250--251
 []\OT1/lmtt/m/n/12 javac -cp .:<add the absolute path to the .jar package here>
  <relative path
  []
@@ -366,18 +366,18 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 01A453A138367A1CA8EC1ACDD6B590E3;3834.
+(rerunfilecheck)             Checksum: E941F3E03C71E0AB87E05026957E87B8;3937.
 )
 
 Here is how much of LuaTeX's memory you used:
- 9603 strings out of 476553
+ 9605 strings out of 476553
  125024,1977958 words of node,token memory allocated
  448 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 54 glue_spec, 1 write nodes
-   avail lists: 2:23,3:332,4:5,5:299,6:49,7:4909,8:53,9:278,10:4,11:428
- 31375 multiletter control sequences out of 65536+600000
+   avail lists: 2:24,3:284,4:5,5:293,6:44,7:4909,8:53,9:246,10:4,11:428
+ 31376 multiletter control sequences out of 65536+600000
  38 fonts using 1583587 bytes
- 72i,5n,75p,603b,472s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,5n,75p,603b,474s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvip
 s/lm/lm-rmtt.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}</usr/share/texl
 ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/tex
@@ -386,10 +386,10 @@ fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.
 pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/ty
 pe1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
-Output written on report.pdf (9 pages, 160734 bytes).
+Output written on report.pdf (9 pages, 161735 bytes).
 
-PDF statistics: 260 PDF objects out of 1000 (max. 8388607)
- 238 compressed objects within 3 object streams
- 97 named destinations out of 1000 (max. 131072)
- 225 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 264 PDF objects out of 1000 (max. 8388607)
+ 242 compressed objects within 3 object streams
+ 98 named destinations out of 1000 (max. 131072)
+ 233 words of extra memory for PDF output out of 10000 (max. 100000000)
 

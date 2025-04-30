@@ -84,6 +84,13 @@ The \texttt{MyInfArith} class serves as the entry point for running the arbitrar
     \item \textbf{Input Handling:} Accepts user input in the form of command-line arguments, which specify the type (integer or float), operation (add, sub, mul, div), and the two operands.
     \item \textbf{Operation Dispatch:} Depending on the operation requested, the appropriate method from \texttt{Ainteger} or \texttt{Afloat} is invoked.
 \end{itemize}
+\subsection{Runner.py}
+\begin{itemize}
+    \item A Python script to compile and run \texttt{MyInfArith.java} with \texttt{aarithmetic.jar} in classpath.
+    \item Accepts 4 command-line arguments: type, operation, operand1, and operand2.
+    \item Uses \texttt{subprocess.run()} to handle Java compilation and execution.
+    \item Displays result or error based on Java program output.
+\end{itemize}
 
 \subsection{aarithmetic.jar}
 
