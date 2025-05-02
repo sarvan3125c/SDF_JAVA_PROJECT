@@ -35,7 +35,7 @@
 
 ## COMPONENTS
 
-### AINTEGER.JAVA (INTEGER CLASS)
+### Ainteger.JAVA (INTEGER CLASS)
 - The `Ainteger` class handles operations for arbitrarily large integers, including support for negative values. It supports basic arithmetic operations such as addition, subtraction, multiplication, and division, using string-based representations for the numbers. This class ensures no precision is lost, even with very large numbers.
 - This class file belongs to the `arbitraryarithmetic` package.
 
@@ -64,7 +64,7 @@
 - `parse(String s)`: Parses a string into an `Ainteger` object.
 - `valid_check(String s)`: Checks if a string is a valid integer.
 
-### AFLOAT.JAVA (FLOAT CLASS)
+### Afloat.JAVA (FLOAT CLASS)
 - This class file belongs to the `arbitraryarithmetic` package.
 - The `Afloat` class handles arbitrary-precision floating-point numbers, offering support for both integer and decimal parts. Like the `Ainteger` class, `Afloat` uses string-based representations to store numbers and ensures no precision loss for large numbers. This class supports operations like addition, subtraction, multiplication, and division on floating-point numbers.
 
@@ -98,13 +98,13 @@
 - `parse(String s)`: Parses a string into an `Afloat` object.
 - `valid_check(String s)`: Checks if a string is a valid float.
 
-### MYINFARITH.JAVA
+### MyInfArith.JAVA
 - It is a Java file which imports the package and runs test cases.
 - It takes command-line arguments and performs arithmetic operations.
 
 ### EXECUTING USING MYINFARITH
 To perform addition, subtraction, multiplication, and division, run the following commands:
-
+- command MyInfArith <int/float> <add/sub/mul/div> <operand1> <operand2>
 ```bash
 java MyInfArith int add 49485475 9897557
 Result: 59383032
@@ -120,7 +120,7 @@ Result: 5
 ---
 ## Executing using runner.py
 To perform addition, subtraction, multiplication, and division, run the following commands:
-
+- command python runner.py <int/float> <add/sub/mul/div> <operand1> <operand2>
 ```bash
 python3 runner.py int add 2402726 -200000
 Result: 2202726
@@ -131,6 +131,9 @@ Result: -63.063
 python3 runner.py float div 9 7 
 Result: 1.285714285714285714285714285714
 ```
+## Executing using JAR file
+To perform addition, subtraction, multiplication, and division, run the following command:
+- command: java -cp arbitraryarithmetic/aarithmetic.jar:. MyInfArith <int/float> <add/sub/mul/div> <operand1> <operand2>
 ## Installation
 
 Simply download or clone this repository and add the `Ainteger` and `Afloat` classes to your Java project. There's no additional installation required.
@@ -140,10 +143,11 @@ Simply download or clone this repository and add the `Ainteger` and `Afloat` cla
 - Arbitrary Precision Arithmetic: Implementing custom data types for handling large numbers, which standard Java data types can't manage due to their fixed size and precision limits.
 - String-based Representation: Using strings to represent large integers and floating-point numbers ensures that precision is maintained across arithmetic operations.
 - Learned How to use ant build tool and using Python to run commands in command line.
-###
+### Veification approch
 - Each arithmetic operation (addition, subtraction, multiplication, division) was tested with both small and large numbers to ensure the results are accurate.
 - Special attention was given to operations with negative numbers, zero, and very large numbers.
 - The results from the library were compared against the built-in Java BigInteger and BigDecimal classes to verify correctness.
-###
+### Limitations
+- It does not have other operations exception these four.
 - The string-based arithmetic operations may be slower compared to built-in data types, especially for very large numbers.
 - Handling large numbers using strings can consume a significant amount of memory, which may be a concern for extremely large values.

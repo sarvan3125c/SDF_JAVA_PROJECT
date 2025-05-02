@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.17.0 (TeX Live 2023/Debian)  (format=lualatex 2025.4.30)  30 APR 2025 11:25
+This is LuaHBTeX, Version 1.17.0 (TeX Live 2023/Debian)  (format=lualatex 2025.4.30)  2 MAY 2025 07:44
  restricted system commands enabled.
 **report.tex
 (./report.tex
@@ -355,7 +355,7 @@ warning  (pdf backend): ignoring duplicate destination with the name 'page.1'
 [1
 Missing character: There is no ’ (U+2019) in font rm-lmr12!
 ] [2] [3] [4] [5] [6] [7]
-Overfull \hbox (22.74478pt too wide) in paragraph at lines 250--251
+Overfull \hbox (22.74478pt too wide) in paragraph at lines 253--254
 []\OT1/lmtt/m/n/12 javac -cp .:<add the absolute path to the .jar package here>
  <relative path
  []
@@ -383,13 +383,14 @@ s/lm/lm-rmtt.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}</usr/share/texl
 ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.
-pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/ty
-pe1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
-Output written on report.pdf (9 pages, 161735 bytes).
+e1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></us
+r/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/publ
+ic/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
+Output written on report.pdf (9 pages, 169310 bytes).
 
-PDF statistics: 264 PDF objects out of 1000 (max. 8388607)
- 242 compressed objects within 3 object streams
+PDF statistics: 268 PDF objects out of 1000 (max. 8388607)
+ 245 compressed objects within 3 object streams
  98 named destinations out of 1000 (max. 131072)
  233 words of extra memory for PDF output out of 10000 (max. 100000000)
 

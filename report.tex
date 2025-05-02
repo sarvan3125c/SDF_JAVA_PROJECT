@@ -49,8 +49,8 @@ Java's standard numeric types have fixed ranges that can be limiting for certain
 \begin{itemize}
     \item \texttt{int}: A signed 32-bit integer with a range from \(-2^{31}\) to \(2^{31} - 1\).
     \item \texttt{long}: A signed 64-bit integer with a range from \(-2^{63}\) to \(2^{63} - 1\).
-    \item \texttt{float}: A 32-bit floating-point number, which can represent values from approximately \(\pm 3.4 \times 10^{38}\), with a precision of about 7 decimal digits.
-    \item \texttt{double}: A 64-bit floating-point number, which can represent values from approximately \(\pm 1.8 \times 10^{308}\), with a precision of about 15-16 decimal digits.
+    \item \texttt{float}: A 32-bit floating-point number, which can represent values from approximately \(1.40239846 \times 10^{-45}\) to \(3.40282347 \times 10^{38}\).
+    \item \texttt{double}: A 64-bit floating-point number, which can represent values from approximately \(4.94065645841246544 \times 10^{-324}\) to \(1.79769313486231570 \times 10^{308}\).
 \end{itemize}
 
 While these types cover a wide range of values, they are still limited by their size and precision.
@@ -95,13 +95,16 @@ The \texttt{MyInfArith} class serves as the entry point for running the arbitrar
 \subsection{aarithmetic.jar}
 
 The \texttt{aarithmetic.jar} file is an essential part of the project, and it serves the following purposes:
-
 \begin{itemize}
     \item It includes the compiled \texttt{Ainteger.class} and \texttt{Afloat.class} files.
-    \item It contains functionality for arbitrary-precision integer and floating-point arithmetic, supporting operations such as addition, subtraction, multiplication, and division on large numbers.
-    \item The JAR file is created through an automated build process defined in the \texttt{build.xml} Ant file. This file compiles the Java classes and packages them into the JAR.
-    \item It is intended for use in applications requiring high-precision numerical operations that cannot be handled by Java's standard integer and floating-point types.
+    \item It contains functionality for arbitrary-precision integer and floating-point arithmetic, 
+          supporting operations such as addition, subtraction, multiplication, and division on large numbers.
+    \item The JAR file is created through an automated build process defined in the \texttt{build.xml} Ant file. 
+    \item This file compiles the Java classes and packages them into the JAR.
+    \item It is intended for use in applications requiring high-precision numerical operations 
+          that cannot be handled by Java's standard integer and floating-point types.
 \end{itemize}
+
 
 
 \subsection{Ant Build Script (build.xml)}

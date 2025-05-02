@@ -1,5 +1,5 @@
 # Fdb version 4
-["lualatex"] 1746012319.65661 "report.tex" "report.pdf" "report" 1746012320.56928 0
+["lualatex"] 1746171892.40464 "report.tex" "report.pdf" "report" 1746171892.7804 0
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmex10.tfm" 1136768653 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
@@ -16,6 +16,7 @@
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1248133631 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1248133631 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
   "/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty" 1576625341 40635 c40361e206be584d448876bba8a64a3b ""
   "/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty" 1576016050 33961 6b5c75130e435b2bfdb9f480a09a39f9 ""
   "/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty" 1576625223 8371 9d55b8bd010bc717624922fb3477d92e ""
@@ -76,9 +77,9 @@
   "/usr/share/texmf/tex/latex/lm/ot1lmtt.fd" 1616454256 2713 c40650b5e64f743884fe5c8bc940e517 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1746011203.38281 128028 f533b797fba58d231669ea19e894e23e ""
   "/var/lib/texmf/web2c/luahbtex/lualatex.fmt" 1746011281 12240468 f26701a60f4e7ea455c61885d34c49bc ""
-  "report.aux" 1746012320.46188 3723 225038cd04da9a249f535a1fdacfa723 "lualatex"
-  "report.out" 1746012320.46188 3937 e941f3e03c71e0ab87e05026957e87b8 "lualatex"
-  "report.tex" 1746012277.92655 14389 93190cdc6024b9e991475daa84930366 ""
+  "report.aux" 1746171892.66224 3723 225038cd04da9a249f535a1fdacfa723 "lualatex"
+  "report.out" 1746171892.66224 3937 e941f3e03c71e0ab87e05026957e87b8 "lualatex"
+  "report.tex" 1746171869.34508 14423 57bd59296ab6d77e5b2c405cd5401bb3 ""
   (generated)
   "report.aux"
   "report.log"

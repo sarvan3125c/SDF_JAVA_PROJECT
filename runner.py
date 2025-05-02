@@ -2,7 +2,7 @@ import subprocess
 import sys
 
 if len(sys.argv) != 5:
-    print("Usage: python codeRunner.py <int/float> <add/sub/mul/div> <operand1> <operand2>")
+    print("Usage: python runner.py <int/float> <add/sub/mul/div> <operand1> <operand2>")
     sys.exit(1)
 
 type = sys.argv[1]

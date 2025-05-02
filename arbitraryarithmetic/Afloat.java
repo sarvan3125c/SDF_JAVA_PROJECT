@@ -122,6 +122,10 @@ public class Afloat{
     }
     public String addition(Afloat a){
         String ans = this.add(a);
+        int index = ans.indexOf('.');
+        if (index != -1 && ans.length() > index + 31) {
+            ans = ans.substring(0, index + 1) + ans.substring(index + 1, index + 31);
+        }
         return remove_zeroes(ans);
     }
     public String sub(Afloat a){
@@ -150,6 +154,10 @@ public class Afloat{
     }
     public String subtract(Afloat a){
         String ans = this.sub(a);
+        int index = ans.indexOf('.');
+        if (index != -1 && ans.length() > index + 31) {
+            ans = ans.substring(0, index + 1) + ans.substring(index + 1, index + 31);
+        }
         return remove_zeroes(ans);
     }
     public String mult(Afloat a){
@@ -162,6 +170,10 @@ public class Afloat{
     }
     public String multiply(Afloat a){
         String ans = this.mult(a);
+        int index = ans.indexOf('.');
+        if (index != -1 && ans.length() > index + 31) {
+            ans = ans.substring(0, index + 1) + ans.substring(index + 1, index + 31);
+        }
         return remove_zeroes(ans);
     }
     public String division(Afloat a){
